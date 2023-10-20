@@ -1,0 +1,26 @@
+#underText {
+    position: relative;
+    background-color: $white;
+    padding-top: 4rem;
+
+    .underText {
+        display: block;
+        width: 50%;
+        margin-inline: auto;
+    }
+
+    .backgroundImage1 {
+        position: relative;
+        width: 35%;
+        margin-block: 4rem;
+    }
+
+    .backgroundImage2 {
+        position: absolute;
+        right: 0;
+        top: 100%;
+        transform: translateY(-50%);
+        width: 50%;
+        z-index: 10;
+    }
+}

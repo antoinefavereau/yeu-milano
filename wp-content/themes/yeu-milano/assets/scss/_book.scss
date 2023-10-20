@@ -1,0 +1,220 @@
+#book {
+    position: relative;
+    overflow: hidden;
+
+    .backgroundImage {
+        position: absolute;
+        left: 50%;
+        top: 5rem;
+        transform: translateX(-50%);
+        width: 65%;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+        pointer-events: none;
+    }
+
+    .arc {
+        transition: all 0.1s;
+        position: absolute;
+        left: 50%;
+        top: 250px;
+        transform: translateX(-50%);
+        width: 100%;
+        pointer-events: none;
+    }
+
+    .content {
+        transition: all 0.1s;
+        position: relative;
+        top: 350px;
+        width: 100%;
+        min-height: 100vh;
+
+        .logo {
+            position: relative;
+            display: block;
+            margin-inline: auto;
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .window {
+            position: relative;
+            height: 600px;
+            display: block;
+            margin-inline: auto;
+            opacity: 0.5;
+        }
+
+        .book {
+            transform-style: preserve-3d;
+            transform: rotateX(45deg) rotateY(0deg) rotateZ(-45deg);
+            transition: transform 1s;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 10%;
+            margin: auto;
+            width: 30em;
+            height: 40em;
+
+            .side {
+                width: 3em;
+                height: 40em;
+                background: #b36060;
+                position: absolute;
+                left: -3em;
+                top: 0;
+                transform-origin: 100% 100%;
+                transform: rotateY(-90deg) rotateX(0deg);
+            }
+
+            .bottom {
+                width: 25em;
+                height: 3em;
+                background: #e2e2e2;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transform-origin: 100% 100%;
+                transform: rotateX(90deg);
+            }
+
+            &.open {
+                transform: rotateX(35deg) rotateY(0deg) rotateZ(-35deg);
+            }
+
+            .paper {
+                width: 25em;
+                height: 40em;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .paper {
+                transition: transform 1s, box-shadow 0.5s 0.2s;
+                transform-origin: 0 50%;
+                transform-style: preserve-3d;
+
+                &.open {
+                    box-shadow: 2.2em 1em 0px 0px #ccc3a9;
+                    transform: rotateX(0deg) rotateY(-180deg) rotateZ(0deg);
+                }
+
+                .page.front {
+                    transition: transform 1s;
+                    transform-origin: 0 50%;
+                    backface-visibility: hidden;
+                    z-index: 2;
+                }
+            }
+
+            .page {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                -webkit-transform: translateZ(0px);
+                transform: translateZ(0px);
+            }
+
+            .first .page {
+                background: #ef9a9a;
+            }
+
+            .first .page.front:after {
+                position: absolute;
+                content: "";
+                width: 50%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background: rgba(160, 115, 115, 0.1);
+            }
+
+            .paper .back {
+                transition: transform 1s;
+                transform-origin: 0 50%;
+                background: #e1e1e1;
+            }
+
+            .first.paper .back {
+                background: #ef9a9a;
+            }
+
+            .intro {
+                position: absolute;
+                width: 90%;
+                width: calc(100% - 3em);
+                height: 90%;
+                height: calc(100% - 3em);
+                border: 2em solid #eee;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+            }
+
+            .paper:not(.first) .page {
+                background: #f1f1f1;
+                background-image: linear-gradient(90deg, transparent 40px, #abced4 40px, #abced4 42px, transparent 42px), linear-gradient(#e1e1e1 0.1em, transparent 0.1em);
+                background-size: 100% 1.5em;
+            }
+
+            .paper:not(.first) .back {
+                background: #e1e1e1;
+            }
+
+            .open.second .back {
+                transform: translateZ(-1px);
+            }
+
+            .open.third .back {
+                transform: translateZ(-2px);
+            }
+
+            .paper.first {
+                z-index: 8;
+            }
+
+            .paper.second {
+                z-index: 7;
+            }
+
+            .paper.third {
+                z-index: 6;
+            }
+
+            .paper.fourth {
+                z-index: 5;
+            }
+
+            .paper.first .front {
+                transform: translateZ(0.4px);
+            }
+
+            .paper.second .front {
+                transform: translateZ(0.3px);
+            }
+
+            .paper.third .front {
+                transform: translateZ(0.2px);
+            }
+
+            .paper.fourth .front {
+                transform: translateZ(0.1px);
+            }
+
+            .second-page #vara-container {
+                width: 100%;
+                height: 100%;
+                padding: 1em;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+$white: #fff;
+$black: #090a0a;
+$trasparent: rgba(140, 140, 140, 0.2);
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: $black;
+    font-family: system-ui;
+}
+
+.underline {
+    position: relative;
+    padding-bottom: 4px;
+    text-decoration: none;
+
+    &::after {
+        content: "";
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: calc(100% - 12px);
+        height: 2px;
+        background-color: $white;
+    }
+}
