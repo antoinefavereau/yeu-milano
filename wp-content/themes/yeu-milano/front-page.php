@@ -4,7 +4,7 @@ get_header();
 
 <header id="header">
     <a href="" class="logo">
-        <img src="assets\images\logo band 3.png" alt="logo">
+        <img src="<?= get_template_directory_uri() ?>/assets\images\logo band 3.png" alt="logo">
     </a>
     <button class="burger" title="menu">
         <div class="burgerLine"></div>
