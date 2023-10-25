@@ -468,6 +468,7 @@ body {
   position: relative;
   background-color: #fff;
   padding-top: 4rem;
+  overflow: hidden;
 }
 #underText .underText {
   display: block;
@@ -485,10 +486,10 @@ body {
 }
 #underText .backgroundImage2 {
   position: absolute;
-  right: 0;
+  right: -15%;
   top: 100%;
   transform: translateY(-50%);
-  width: 50%;
+  width: 70%;
   z-index: 10;
   pointer-events: none;
   -webkit-user-select: none;
