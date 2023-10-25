@@ -12,6 +12,8 @@
         object-fit: contain;
         object-position: center;
         pointer-events: none;
+        -webkit-user-select: none;
+        user-select: none;
     }
 
     .arc {
@@ -22,6 +24,8 @@
         transform: translateX(-50%);
         width: 100%;
         pointer-events: none;
+        -webkit-user-select: none;
+        user-select: none;
     }
 
     .content {
@@ -47,6 +51,9 @@
             display: block;
             margin-inline: auto;
             opacity: 0.5;
+            pointer-events: none;
+            -webkit-user-select: none;
+            user-select: none;
         }
 
         .book {

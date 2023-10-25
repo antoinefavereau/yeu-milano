@@ -49,8 +49,8 @@ body {
   margin-top: 5vw;
   margin-right: 13%;
   transform: translateX(50%);
-  width: 45px;
-  height: 40px;
+  width: 40px;
+  height: 35px;
   background-color: transparent;
   border: none;
   outline: none;
@@ -142,6 +142,8 @@ body {
   object-fit: contain;
   object-position: center;
   pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 #afficheSection .imageDiv {
   position: relative;
@@ -238,26 +240,34 @@ body {
 #logos {
   position: relative;
   border-block: solid 1px rgba(140, 140, 140, 0.2);
+  overflow-x: hidden;
 }
-#logos .swiper.logoCarousel {
+#logos ul {
   position: relative;
-  width: 100%;
-}
-#logos .swiper.logoCarousel .swiper-wrapper .swiper-slide {
-  text-align: center;
+  width: max-content;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  animation: scroll 20s forwards linear infinite;
+}
+#logos ul li {
+  position: relative;
   width: 100px;
   height: 100px;
 }
-#logos .swiper.logoCarousel .swiper-wrapper .swiper-slide img {
-  display: block;
+#logos ul li img {
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: center;
 }
 
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
 #book {
   position: relative;
   overflow: hidden;
@@ -272,6 +282,8 @@ body {
   object-fit: contain;
   object-position: center;
   pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 #book .arc {
   transition: all 0.1s;
@@ -281,6 +293,8 @@ body {
   transform: translateX(-50%);
   width: 100%;
   pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 #book .content {
   transition: all 0.1s;
@@ -304,6 +318,9 @@ body {
   display: block;
   margin-inline: auto;
   opacity: 0.5;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 #book .content .book {
   transform-style: preserve-3d;
@@ -455,12 +472,16 @@ body {
 #underText .underText {
   display: block;
   width: 50%;
+  max-width: 500px;
   margin-inline: auto;
 }
 #underText .backgroundImage1 {
   position: relative;
   width: 35%;
   margin-block: 4rem;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 #underText .backgroundImage2 {
   position: absolute;
@@ -469,6 +490,9 @@ body {
   transform: translateY(-50%);
   width: 50%;
   z-index: 10;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #footer {
@@ -515,14 +539,6 @@ body {
 #footer .content .contacts .item span {
   margin-left: 3rem;
 }
-#footer .content .contacts .item:hover img {
-  transform: scale(1.1);
-}
-#footer .content .contacts .item:hover span::after {
-  width: calc(50% - 12px);
-  left: 0;
-  transform: translateX(0%);
-}
 #footer .content .citations {
   position: relative;
   display: flex;
@@ -564,9 +580,6 @@ body {
 }
 #footer .underFooter .underline {
   color: #fff;
-}
-#footer .underFooter .underline:hover::after {
-  width: calc(50% - 12px);
 }
 #footer .underFooter .links {
   display: flex;

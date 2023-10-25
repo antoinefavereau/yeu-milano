@@ -45,18 +45,6 @@
                 span {
                     margin-left: 3rem;
                 }
-
-                &:hover {
-                    img {
-                        transform: scale(1.1);
-                    }
-
-                    span::after {
-                        width: calc(50% - 12px);
-                        left: 0;
-                        transform: translateX(0%);
-                    }
-                }
             }
         }
 
@@ -108,10 +96,6 @@
 
         .underline {
             color: $white;
-
-            &:hover::after {
-                width: calc(50% - 12px);
-            }
         }
 
         .links {

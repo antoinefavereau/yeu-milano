@@ -34,94 +34,62 @@ get_header();
 <section id="afficheSection">
     <img class="backgroundImage" src="<?= get_template_directory_uri() ?>/assets\images\background\name.png" alt="">
     <div class="imageDiv">
-        <img class="item" data-id="1" src="<?= get_template_directory_uri() ?>/assets\images\affiches\Forever Vacation.jpg" alt="affiche 1">
-        <img class="item" data-id="2" src="<?= get_template_directory_uri() ?>/assets\images\affiches\Amélie Poulain.png" alt="affiche 2">
-        <img class="item" data-id="3" src="<?= get_template_directory_uri() ?>/assets\images\affiches\Me On Drugs.jpg" alt="affiche 3">
-        <img class="item" data-id="4" src="<?= get_template_directory_uri() ?>/assets\images\affiches\Di-meh Shottagwan.jpg" alt="affiche 4">
-        <img class="item" data-id="5" src="<?= get_template_directory_uri() ?>/assets\images\affiches\Supersonic.jpg" alt="affiche 5">
+        <?php
+        $affiches = new WP_Query(array(
+            'post_type' => "affiche"
+        ));
+        $count = 0;
+        if ($affiches->have_posts()) : while ($affiches->have_posts()) : $affiches->the_post();
+                $count++; ?>
+                <img class="item" data-id="<?= $count ?>" src="<?= esc_url(get_field('image')['url']) ?>" alt="<?= the_title() ?>">
+        <?php endwhile;
+        endif;
+        ?>
     </div>
     <div class="descriptionDiv">
-        <div class="item" data-id="1">
-            <h2>
-                Forever Vacation
-            </h2>
-            <p>
-                Affiche faite à l'occasion d'un concours de design pour la marque forever vacation organisé par le collectif 99reference.
-                Le thème du concours était "les sentiments" un travail qui mèle design, photograpie et typographie.
-            </p>
-            <div class="secondaryImages">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\affiches\Forever Vacation1.jpg" alt="détail 1">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\affiches\Forever Vacation2.jpg" alt="détail 2">
-            </div>
-        </div>
-        <div class="item" data-id="2">
-            <h2>
-                Amélie Poulain
-            </h2>
-            <p>
-                Affiche faite à l'occasion de l'anniversaire du film amélie poulain. L'exercice etait de reprendre le film comme reference dans notre style.
-                Un style plus street, rap qui reprend les codes de cet univers aujourd'hui.
-            </p>
-            <div class="secondaryImages">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\affiches\amelie1.jpg" alt="détail 1">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\affiches\amelie2.jpg" alt="détail 2">
-            </div>
-        </div>
-        <div class="item" data-id="3">
-            <h2>
-                Me On Drugs
-            </h2>
-            <p>
-                Affiche de tests graphiques.
-            </p>
-            <div class="secondaryImages">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\affiches\Me On Drugs1.jpg" alt="détail 1">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\affiches\Me On Drugs2.jpg" alt="détail 2">
-            </div>
-        </div>
-        <div class="item" data-id="4">
-            <h2>
-                Di-meh Shottagwan
-            </h2>
-            <p>
-                Affiche fan art de la musique rap shottagwan par Di-meh.
-            </p>
-            <div class="secondaryImages">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\affiches\Di-meh 1.jpg" alt="détail 1">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\affiches\Di-meh 2.jpg" alt="détail 2">
-            </div>
-        </div>
-        <div class="item" data-id="5">
-            <h2>
-                Supersonic
-            </h2>
-            <p>
-                Affiche fan art de la musique supersonic, my exisence par skrillex, Dylan Brady, Noisia et Josh pan.
-            </p>
-            <div class="secondaryImages">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\affiches\Supersonic 1.jpg" alt="détail 1">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\affiches\Supersonic 2.jpg" alt="détail 2">
-            </div>
-        </div>
+        <?php
+        $affiches = new WP_Query(array(
+            'post_type' => "affiche"
+        ));
+        $count = 0;
+        if ($affiches->have_posts()) : while ($affiches->have_posts()) : $affiches->the_post();
+                $count++;
+                $subImages = get_field('images'); ?>
+                <div class="item" data-id="<?= $count ?>">
+                    <h2><?= the_title() ?></h2>
+                    <p><?= the_field("description") ?></p>
+                    <?php if ($subImages['image_1']) : ?>
+                        <div class="secondaryImages">
+                            <img src="<?= esc_url($subImages['image_1']['url']) ?>" alt="<?= $subImages['image_1']['title'] ?>">
+                            <?php if ($subImages['image_2']) : ?>
+                                <img src="<?= esc_url($subImages['image_2']['url']) ?>" alt="<?= $subImages['image_2']['title'] ?>">
+                            <?php endif; ?>
+                            <?php if ($subImages['image_3']) : ?>
+                                <img src="<?= esc_url($subImages['image_3']['url']) ?>" alt="<?= $subImages['image_3']['title'] ?>">
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+        <?php endwhile;
+        endif;
+        ?>
     </div>
     <div class="listDiv">
         <div class="swiper afficheCarousel">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" data-id="1">
-                    <img src="<?= get_template_directory_uri() ?>/assets\images\affiches\Forever Vacation.jpg" alt="affiche 1">
-                </div>
-                <div class="swiper-slide" data-id="2">
-                    <img src="<?= get_template_directory_uri() ?>/assets\images\affiches\Amélie Poulain.png" alt="affiche 2">
-                </div>
-                <div class="swiper-slide" data-id="3">
-                    <img src="<?= get_template_directory_uri() ?>/assets\images\affiches\Me On Drugs.jpg" alt="affiche 3">
-                </div>
-                <div class="swiper-slide" data-id="4">
-                    <img src="<?= get_template_directory_uri() ?>/assets\images\affiches\Di-meh Shottagwan.jpg" alt="affiche 4">
-                </div>
-                <div class="swiper-slide" data-id="5">
-                    <img src="<?= get_template_directory_uri() ?>/assets\images\affiches\Supersonic.jpg" alt="affiche 5">
-                </div>
+                <?php
+                $affiches = new WP_Query(array(
+                    'post_type' => "affiche"
+                ));
+                $count = 0;
+                if ($affiches->have_posts()) : while ($affiches->have_posts()) : $affiches->the_post();
+                        $count++; ?>
+                        <div class="swiper-slide" data-id="<?= $count ?>">
+                            <img src="<?= esc_url(get_field('image')['url']) ?>" alt="<?= the_title() ?>">
+                        </div>
+                <?php endwhile;
+                endif;
+                ?>
             </div>
 
             <div class="afficheCarousel-button afficheCarousel-button-prev">
@@ -139,34 +107,18 @@ get_header();
 </section>
 
 <section id="logos">
-    <div class="swiper logoCarousel">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\logos\logo band 1.png" alt="logo 1">
-            </div>
-            <div class="swiper-slide">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\logos\logo band 2.png" alt="logo 2">
-            </div>
-            <div class="swiper-slide">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\logos\logo band 3.png" alt="logo 3">
-            </div>
-            <div class="swiper-slide">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\logos\logo band 4.png" alt="logo 4">
-            </div>
-            <div class="swiper-slide">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\logos\logo band 5.png" alt="logo 5">
-            </div>
-            <div class="swiper-slide">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\logos\logo band 6.png" alt="logo 6">
-            </div>
-            <div class="swiper-slide">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\logos\logo band 7.png" alt="logo 7">
-            </div>
-            <div class="swiper-slide">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\logos\logo band 8.png" alt="logo 8">
-            </div>
-        </div>
-    </div>
+    <ul>
+        <?php
+        $logos = new WP_Query(array(
+            'post_type' => "logo"
+        ));
+        if ($logos->have_posts()) : while ($logos->have_posts()) : $logos->the_post(); ?>
+                <li>
+                    <img src="<?= esc_url(get_field('image')['url']) ?>" alt="<?= the_title() ?>">
+                </li>
+        <?php endwhile;
+        endif; ?>
+    </ul>
 </section>
 
 <section id="book">
