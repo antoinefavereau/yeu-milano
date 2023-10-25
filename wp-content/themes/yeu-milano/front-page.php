@@ -160,7 +160,7 @@ get_header();
 <section id="underText">
     <img class="underText" src="<?= get_template_directory_uri() ?>/assets\images\sous texte.png" alt="">
     <img class="backgroundImage1" src="<?= get_template_directory_uri() ?>/assets\images\background\étoile.png" alt="">
-    <img class="backgroundImage2" src="<?= get_template_directory_uri() ?>/assets\images\background\étoile.png" alt="">
+    <img class="backgroundImage2" src="<?= get_template_directory_uri() ?>/assets\images\background\étoile droite.png" alt="">
 </section>
 
 <footer id="footer">

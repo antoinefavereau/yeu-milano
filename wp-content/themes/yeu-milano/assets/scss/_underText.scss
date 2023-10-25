@@ -2,7 +2,6 @@
     position: relative;
     background-color: $white;
     padding-top: 4rem;
-    overflow: hidden;
 
     .underText {
         display: block;
@@ -22,10 +21,10 @@
 
     .backgroundImage2 {
         position: absolute;
-        right: -15%;
+        right: 0;
         top: 100%;
         transform: translateY(-50%);
-        width: 70%;
+        width: 50%;
         z-index: 10;
         pointer-events: none;
         -webkit-user-select: none;
