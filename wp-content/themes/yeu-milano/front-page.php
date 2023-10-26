@@ -17,7 +17,7 @@ get_header();
     <video class="backgroundVideo" src="<?= get_template_directory_uri() ?>/assets/videos/hd0992.mov" autoplay loop muted></video>
     <img class="name" src="<?= get_template_directory_uri() ?>/assets\images\name1.png" alt="name">
     <img class="logo left" src="<?= get_template_directory_uri() ?>/assets\images\logo 2.png" alt="">
-    <img class="logo right" src="<?= get_template_directory_uri() ?>/assets\images\logo band 5.png" alt="">
+    <img class="logo page" src="<?= get_template_directory_uri() ?>/assets\images\logo band 5.png" alt="">
     <p>
         Oluptatiur? Obistotatis aut lab illandu ntotatatem
         ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae
@@ -128,31 +128,25 @@ get_header();
         <img class="logo" src="<?= get_template_directory_uri() ?>/assets\images\logo.png" alt="">
         <img src="<?= get_template_directory_uri() ?>/assets\images\background\fenetre.png" alt="" class="window">
         <div class="book">
-            <div class="first paper">
-                <div class="page front contents">
-                </div>
-                <div class="page back"></div>
+            <div class="page">
+                <figure class="back" style="background-image: url('');">8</figure>
+                <figure class="front" style="background-image: url('');">7</figure>
             </div>
-            <div class="second paper">
-                <div class="page front contents">
-                    <div id="vara-container"></div>
-                </div>
-                <div class="page back"></div>
+            <div class="page">
+                <figure class="back" style="background-image: url('');">6</figure>
+                <figure class="front" style="background-image: url('');">5</figure>
             </div>
-            <div class="third paper">
-                <div class="page front contents">
-                    <div id="vara-container2"></div>
-                </div>
-                <div class="page back"></div>
+            <div class="page">
+                <figure class="back" style="background-image: url('');">4</figure>
+                <figure class="front" style="background-image: url('');">3</figure>
             </div>
-            <div class="fourth paper">
-                <div class="page last front contents">
-                    <div id="vara-container3"></div>
-                </div>
-                <div class="page back"></div>
+            <div class="page">
+                <figure class="back" style="background-image: url('');">2</figure>
+                <figure class="front" id="cover">
+                    <h1>Book Title</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, modi.</p>
+                </figure>
             </div>
-            <div class="side"></div>
-            <div class="bottom"></div>
         </div>
     </div>
 </section>
