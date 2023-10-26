@@ -129,20 +129,24 @@ get_header();
         <img src="<?= get_template_directory_uri() ?>/assets\images\background\fenetre.png" alt="" class="window">
         <div class="book">
             <div class="paper">
-                <figure class="back cover"></figure>
-                <figure class="front"><img src="https://placekitten.com/200/300" alt=""></figure>
+                <figure class="back"></figure>
+                <figure class="front"></figure>
             </div>
             <div class="paper">
-                <figure class="back"><img src="https://placekitten.com/200/300" alt=""></figure>
-                <figure class="front"><img src="https://placekitten.com/200/300" alt=""></figure>
+                <figure class="back"><img src="<?= get_template_directory_uri() ?>/assets/images/book/page8.jpg" alt=""></figure>
+                <figure class="front"><img src="<?= get_template_directory_uri() ?>/assets/images/book/page7.jpg" alt=""></figure>
             </div>
             <div class="paper">
-                <figure class="back"><img src="https://placekitten.com/200/300" alt=""></figure>
-                <figure class="front"><img src="https://placekitten.com/200/300" alt=""></figure>
+                <figure class="back"><img src="<?= get_template_directory_uri() ?>/assets/images/book/page6.jpg" alt=""></figure>
+                <figure class="front"><img src="<?= get_template_directory_uri() ?>/assets/images/book/page5.jpg" alt=""></figure>
             </div>
             <div class="paper">
-                <figure class="back"><img src="https://placekitten.com/200/300" alt=""></figure>
-                <figure class="front cover"></figure>
+                <figure class="back"><img src="<?= get_template_directory_uri() ?>/assets/images/book/page4.jpg" alt=""></figure>
+                <figure class="front"><img src="<?= get_template_directory_uri() ?>/assets/images/book/page3.jpg" alt=""></figure>
+            </div>
+            <div class="paper">
+                <figure class="back"><img src="<?= get_template_directory_uri() ?>/assets/images/book/page2.jpg" alt=""></figure>
+                <figure class="front"><img src="<?= get_template_directory_uri() ?>/assets/images/book/page1.jpg" alt=""></figure>
             </div>
             <div class="side"></div>
             <div class="bottom"></div>

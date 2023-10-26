@@ -79,7 +79,7 @@ var si = paper.length;
 var z = 1;
 
 function turnRight() {
-    if (si >= 1) {
+    if (si > 1) {
         book.classList.add("open");
         si--;
         paper[si].classList.add("flip");
