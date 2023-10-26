@@ -41,7 +41,7 @@ get_header();
         $count = 0;
         if ($affiches->have_posts()) : while ($affiches->have_posts()) : $affiches->the_post();
                 $count++; ?>
-                <img class="item" data-id="<?= $count ?>" src="<?= esc_url(get_field('image')['url']) ?>" alt="<?= the_title() ?>">
+                <img class="item" data-id="<?= $count ?>" src="<?= esc_url(get_field('image')['sizes']['large']) ?>" alt="<?= the_title() ?>">
         <?php endwhile;
         endif;
         ?>
@@ -60,12 +60,12 @@ get_header();
                     <p><?= the_field("description") ?></p>
                     <?php if ($subImages['image_1']) : ?>
                         <div class="secondaryImages">
-                            <img src="<?= esc_url($subImages['image_1']['url']) ?>" alt="<?= $subImages['image_1']['title'] ?>">
+                            <img src="<?= esc_url($subImages['image_1']['sizes']['thumbnail']) ?>" alt="<?= $subImages['image_1']['title'] ?>">
                             <?php if ($subImages['image_2']) : ?>
-                                <img src="<?= esc_url($subImages['image_2']['url']) ?>" alt="<?= $subImages['image_2']['title'] ?>">
+                                <img src="<?= esc_url($subImages['image_2']['sizes']['thumbnail']) ?>" alt="<?= $subImages['image_2']['title'] ?>">
                             <?php endif; ?>
                             <?php if ($subImages['image_3']) : ?>
-                                <img src="<?= esc_url($subImages['image_3']['url']) ?>" alt="<?= $subImages['image_3']['title'] ?>">
+                                <img src="<?= esc_url($subImages['image_3']['sizes']['thumbnail']) ?>" alt="<?= $subImages['image_3']['title'] ?>">
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>
@@ -85,7 +85,7 @@ get_header();
                 if ($affiches->have_posts()) : while ($affiches->have_posts()) : $affiches->the_post();
                         $count++; ?>
                         <div class="swiper-slide" data-id="<?= $count ?>">
-                            <img src="<?= esc_url(get_field('image')['url']) ?>" alt="<?= the_title() ?>">
+                            <img src="<?= esc_url(get_field('image')['sizes']['medium']) ?>" alt="<?= the_title() ?>">
                         </div>
                 <?php endwhile;
                 endif;
@@ -114,7 +114,7 @@ get_header();
         ));
         if ($logos->have_posts()) : while ($logos->have_posts()) : $logos->the_post(); ?>
                 <li>
-                    <img src="<?= esc_url(get_field('image')['url']) ?>" alt="<?= the_title() ?>">
+                    <img src="<?= esc_url(get_field('image')['sizes']['thumbnail']) ?>" alt="<?= the_title() ?>">
                 </li>
         <?php endwhile;
         endif; ?>
@@ -130,18 +130,18 @@ get_header();
         <div class="book">
             <div class="paper">
                 <figure class="back cover"></figure>
-                <figure class="front">6</figure>
+                <figure class="front"><img src="https://placekitten.com/200/300" alt=""></figure>
             </div>
             <div class="paper">
-                <figure class="back">5</figure>
-                <figure class="front">4</figure>
+                <figure class="back"><img src="https://placekitten.com/200/300" alt=""></figure>
+                <figure class="front"><img src="https://placekitten.com/200/300" alt=""></figure>
             </div>
             <div class="paper">
-                <figure class="back">3</figure>
-                <figure class="front">2</figure>
+                <figure class="back"><img src="https://placekitten.com/200/300" alt=""></figure>
+                <figure class="front"><img src="https://placekitten.com/200/300" alt=""></figure>
             </div>
             <div class="paper">
-                <figure class="back">1</figure>
+                <figure class="back"><img src="https://placekitten.com/200/300" alt=""></figure>
                 <figure class="front cover"></figure>
             </div>
             <div class="side"></div>
