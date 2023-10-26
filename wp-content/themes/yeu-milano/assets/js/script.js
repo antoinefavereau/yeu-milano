@@ -46,16 +46,6 @@ document.querySelector("#footer .arrowUp").addEventListener("click", () => {
     });
 });
 
-var logoCarousel = new Swiper(".logoCarousel", {
-    slidesPerView: "auto",
-    spaceBetween: 20,
-    loop: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-});
-
 document.addEventListener("scroll", () => {
     var arcTop = Math.min(250, Math.max(-500, (document.querySelector("#book").getBoundingClientRect().top - 100) * 8));
     var contentTop = Math.min(350, Math.max(50, (document.querySelector("#book").getBoundingClientRect().top + 0) * 2));

@@ -17,7 +17,7 @@ get_header();
     <video class="backgroundVideo" src="<?= get_template_directory_uri() ?>/assets/videos/hd0992.mov" autoplay loop muted></video>
     <img class="name" src="<?= get_template_directory_uri() ?>/assets\images\name1.png" alt="name">
     <img class="logo left" src="<?= get_template_directory_uri() ?>/assets\images\logo 2.png" alt="">
-    <img class="logo page" src="<?= get_template_directory_uri() ?>/assets\images\logo band 5.png" alt="">
+    <img class="logo right" src="<?= get_template_directory_uri() ?>/assets\images\logo band 5.png" alt="">
     <p>
         Oluptatiur? Obistotatis aut lab illandu ntotatatem
         ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae
