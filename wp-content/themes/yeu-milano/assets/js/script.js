@@ -46,14 +46,17 @@ document.querySelector("#footer .arrowUp").addEventListener("click", () => {
     });
 });
 
-document.addEventListener("scroll", () => {
-    var arcTop = Math.min(250, Math.max(-500, (document.querySelector("#book").getBoundingClientRect().top - 100) * 8));
-    var contentTop = Math.min(350, Math.max(50, (document.querySelector("#book").getBoundingClientRect().top + 0) * 2));
-    var width = 850 - (arcTop + 500);
+updateArc();
+document.addEventListener("scroll", updateArc);
+
+function updateArc() {
+    let arcTop = Math.min(250, Math.max(-500, (document.querySelector("#book").getBoundingClientRect().top - 100) * 8));
+    let contentTop = Math.min(350, Math.max(50, (document.querySelector("#book").getBoundingClientRect().top + 0) * 2));
+    let width = 850 - (arcTop + 500);
     document.querySelector("#book .arc").style.top = arcTop + "px";
     document.querySelector("#book .arc").style.width = width + "%";
     document.querySelector("#book .content").style.top = contentTop + "px";
-});
+}
 
 // logos
 
