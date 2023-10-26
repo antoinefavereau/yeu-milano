@@ -69,37 +69,42 @@ for (let i = 0; i < 3; i++) {
 
 // book
 
-var page = document.querySelectorAll(".page");
-var si = page.length;
+var book = document.querySelector(".book");
+var paper = document.querySelectorAll(".paper");
+var si = paper.length;
 var z = 1;
 
 function turnRight() {
     if (si >= 1) {
+        book.classList.add("open");
         si--;
-        page[si].classList.add("flip");
+        paper[si].classList.add("flip");
         z++;
-        page[si].style.zIndex = z;
+        paper[si].style.zIndex = z;
     }
 }
 
 function turnLeft() {
-    if (si < page.length) {
+    if (si > paper.length - 2) {
+        book.classList.remove("open");
+    }
+    if (si < paper.length) {
         si++;
-        page[si - 1].classList.remove("flip");
+        paper[si - 1].classList.remove("flip");
         setTimeout(function () {
             for (let i = 0; i <= si - 1; i++) {
-                page[i].style.zIndex = "auto";
+                paper[i].style.zIndex = "auto";
             }
         }, 350);
     }
 }
 
-document.querySelectorAll(".book .page .front").forEach((element) => {
+document.querySelectorAll(".book .paper .front").forEach((element) => {
     element.addEventListener("click", () => {
         turnRight();
     });
 });
-document.querySelectorAll(".book .page .back").forEach((element) => {
+document.querySelectorAll(".book .paper .back").forEach((element) => {
     element.addEventListener("click", () => {
         turnLeft();
     });

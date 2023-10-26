@@ -128,25 +128,24 @@ get_header();
         <img class="logo" src="<?= get_template_directory_uri() ?>/assets\images\logo.png" alt="">
         <img src="<?= get_template_directory_uri() ?>/assets\images\background\fenetre.png" alt="" class="window">
         <div class="book">
-            <div class="page">
-                <figure class="back" style="background-image: url('');">8</figure>
-                <figure class="front" style="background-image: url('');">7</figure>
+            <div class="paper">
+                <figure class="back cover"></figure>
+                <figure class="front">6</figure>
             </div>
-            <div class="page">
-                <figure class="back" style="background-image: url('');">6</figure>
-                <figure class="front" style="background-image: url('');">5</figure>
+            <div class="paper">
+                <figure class="back">5</figure>
+                <figure class="front">4</figure>
             </div>
-            <div class="page">
-                <figure class="back" style="background-image: url('');">4</figure>
-                <figure class="front" style="background-image: url('');">3</figure>
+            <div class="paper">
+                <figure class="back">3</figure>
+                <figure class="front">2</figure>
             </div>
-            <div class="page">
-                <figure class="back" style="background-image: url('');">2</figure>
-                <figure class="front" id="cover">
-                    <h1>Book Title</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, modi.</p>
-                </figure>
+            <div class="paper">
+                <figure class="back">1</figure>
+                <figure class="front cover"></figure>
             </div>
+            <div class="side"></div>
+            <div class="bottom"></div>
         </div>
     </div>
 </section>
