@@ -66,6 +66,7 @@ const scrollerContent = document.querySelectorAll("#logos ul li");
 for (let i = 0; i < 3; i++) {
     scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
+        duplicatedItem.className = "";
         scrollerInner.appendChild(duplicatedItem);
     });
 }
