@@ -340,8 +340,11 @@ body {
   transform-style: preserve-3d;
   transform-origin: left;
 }
-#book .content .book .page figure.front,
-#book .content .book .page figure.back {
+#book .content .book .page figure {
+  -webkit-user-select: none;
+  user-select: none;
+}
+#book .content .book .page figure.front, #book .content .book .page figure.back {
   position: absolute;
   left: 0;
   top: 0;
@@ -354,6 +357,7 @@ body {
   background-color: white;
   overflow: hidden;
   cursor: pointer;
+  font-size: 100px;
 }
 #book .content .book .page figure.front {
   background-position: right;

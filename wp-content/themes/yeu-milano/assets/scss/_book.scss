@@ -74,31 +74,37 @@
                 transform-style: preserve-3d;
                 transform-origin: left;
 
-                figure.front,
-                figure.back {
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    height: 100%;
-                    width: 100%;
-                    margin: 0;
-                    background-size: 200%;
-                    background-repeat: no-repeat;
-                    backface-visibility: hidden;
-                    background-color: white;
-                    overflow: hidden;
-                    cursor: pointer;
-                }
+                figure {
+                    -webkit-user-select: none;
+                    user-select: none;
 
-                figure.front {
-                    background-position: right;
-                    box-shadow: 2px 2px 15px -2px rgba(0, 0, 0, 0.2);
-                }
+                    &.front,
+                    &.back {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        width: 100%;
+                        margin: 0;
+                        background-size: 200%;
+                        background-repeat: no-repeat;
+                        backface-visibility: hidden;
+                        background-color: white;
+                        overflow: hidden;
+                        cursor: pointer;
+                        font-size: 100px;
+                    }
 
-                figure.back {
-                    background-position: left;
-                    box-shadow: -2px 2px 15px -2px rgba(0, 0, 0, 0.2);
-                    transform: rotateY(180deg);
+                    &.front {
+                        background-position: right;
+                        box-shadow: 2px 2px 15px -2px rgba(0, 0, 0, 0.2);
+                    }
+
+                    &.back {
+                        background-position: left;
+                        box-shadow: -2px 2px 15px -2px rgba(0, 0, 0, 0.2);
+                        transform: rotateY(180deg);
+                    }
                 }
             }
 

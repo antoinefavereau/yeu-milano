@@ -85,9 +85,11 @@ function turnRight() {
 function turnLeft() {
     if (si < page.length) {
         si++;
-        page[si - 1].className = "page";
+        page[si - 1].classList.remove("flip");
         setTimeout(function () {
-            page[si - 1].style.zIndex = "auto";
+            for (let i = 0; i <= si - 1; i++) {
+                page[i].style.zIndex = "auto";
+            }
         }, 350);
     }
 }
