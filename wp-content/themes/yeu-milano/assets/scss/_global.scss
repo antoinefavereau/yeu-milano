@@ -16,7 +16,7 @@ body {
 
     &::after {
         content: "";
-        transition: all 0.3s ease-in-out;
+        transition: all 0.2s ease-in-out;
         position: absolute;
         left: 50%;
         bottom: 0;
@@ -24,5 +24,9 @@ body {
         width: calc(100% - 12px);
         height: 2px;
         background-color: $white;
+    }
+
+    &:hover::after {
+        width: 100%;
     }
 }
