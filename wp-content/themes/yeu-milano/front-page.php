@@ -123,7 +123,10 @@ get_header();
 
 <section id="book">
     <img class="backgroundImage" src="<?= get_template_directory_uri() ?>/assets\images\background\élément 1.png" alt="">
-    <img class="arc" src="<?= get_template_directory_uri() ?>/assets\images\background\volet.png" alt="">
+    <svg class="arc" width="2000" height="1932" viewBox="0 0 2000 1932" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 1553.45C0 1353.51 42.3942 1155.83 124.386 973.465V973.465C288.133 609.263 551.34 298.668 883.744 77.3903L1000 0L1116.26 77.3902C1448.66 298.667 1711.87 609.263 1875.61 973.465V973.465C1957.61 1155.83 2000 1353.51 2000 1553.46V1931.47H0V1553.45Z" fill="white" />
+    </svg>
+
     <div class="content">
         <img class="logo" src="<?= get_template_directory_uri() ?>/assets\images\logo.png" alt="">
         <img src="<?= get_template_directory_uri() ?>/assets\images\background\fenetre.png" alt="" class="window">
