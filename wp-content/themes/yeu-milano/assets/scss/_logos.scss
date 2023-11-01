@@ -15,6 +15,7 @@
             position: relative;
             width: 100px;
             height: 100px;
+            list-style: none;
 
             img {
                 position: relative;
@@ -22,6 +23,15 @@
                 height: 100%;
                 object-fit: contain;
                 object-position: center;
+            }
+        }
+
+        @media screen and (max-width: map-get($breakpoints, md)) {
+            margin-block: 0.5rem;
+            
+            li {
+                width: 80px;
+                height: 80px;
             }
         }
     }

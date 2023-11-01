@@ -2,6 +2,14 @@ $white: #fff;
 $black: #090a0a;
 $trasparent: rgba(140, 140, 140, 0.2);
 
+$breakpoints: (
+    xxl: 1400px,
+    xl: 1200px,
+    lg: 992px,
+    md: 768px,
+    sm: 576px,
+);
+
 body {
     padding: 0;
     margin: 0;

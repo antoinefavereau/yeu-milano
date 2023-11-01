@@ -1,6 +1,6 @@
 var afficheCarousel = new Swiper(".afficheCarousel", {
     direction: "vertical",
-    slidesPerView: 3,
+    slidesPerView: "auto",
     spaceBetween: 20,
     mousewheel: true,
 
@@ -46,16 +46,23 @@ document.querySelector("#footer .arrowUp").addEventListener("click", () => {
     });
 });
 
+const arc = document.querySelector("#book .arc");
+const content = document.querySelector("#book .content");
+
+const arcSpeed = 8;
+const contentSpeed = 2;
+
 updateArc();
 document.addEventListener("scroll", updateArc);
 
 function updateArc() {
-    let arcTop = Math.min(250, Math.max(-500, (document.querySelector("#book").getBoundingClientRect().top - 100) * 8));
-    let contentTop = Math.min(350, Math.max(50, (document.querySelector("#book").getBoundingClientRect().top + 0) * 2));
-    let width = 850 - (arcTop + 500);
-    document.querySelector("#book .arc").style.top = arcTop + "px";
-    document.querySelector("#book .arc").style.width = width + "%";
-    document.querySelector("#book .content").style.top = contentTop + "px";
+    const bookTop = document.querySelector("#book").getBoundingClientRect().top;
+    const arcTop = Math.min(0, Math.max(-1000, (bookTop - window.innerHeight * 0.4) * arcSpeed));
+    const contentTop = Math.min(0, Math.max(-200, (bookTop - window.innerHeight * 0.4) * contentSpeed));
+    const width = 100 - arcTop;
+    arc.style.transform = "translateX(-50%) translateY(" + arcTop + "px)";
+    arc.style.width = width + "%";
+    content.style.transform = "translateY(" + contentTop + "px)";
 }
 
 // logos

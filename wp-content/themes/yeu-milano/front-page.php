@@ -57,6 +57,7 @@ get_header();
                 $subImages = get_field('images'); ?>
                 <div class="item" data-id="<?= $count ?>">
                     <h2><?= the_title() ?></h2>
+                    <img class="mainImage" data-id="<?= $count ?>" src="<?= esc_url(get_field('image')['sizes']['large']) ?>" alt="<?= the_title() ?>">
                     <p><?= the_field("description") ?></p>
                     <?php if ($subImages['image_1']) : ?>
                         <div class="secondaryImages">

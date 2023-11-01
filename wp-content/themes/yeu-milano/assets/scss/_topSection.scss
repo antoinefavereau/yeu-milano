@@ -20,13 +20,20 @@
         transform: translate(-50%, -50%);
         width: 60%;
         height: auto;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            width: 90%;
+            top: 35%;
+        }
     }
 
     .logo {
         position: absolute;
         top: 50%;
-        width: 7%;
-        height: auto;
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        object-position: center;
 
         &.left {
             left: 13%;
@@ -37,6 +44,10 @@
             right: 13%;
             transform: translate(50%, -50%);
         }
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            top: 60%;
+        }
     }
 
     p {
@@ -45,9 +56,14 @@
         bottom: 12%;
         transform: translateX(-50%);
         width: 400px;
-        max-width: 100%;
+        max-width: 90%;
         color: $white;
+        font-size: 16px;
         font-weight: 100;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            font-size: 14px;
+        }
     }
 
     .arrowDown {
