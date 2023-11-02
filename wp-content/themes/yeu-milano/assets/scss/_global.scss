@@ -21,20 +21,15 @@ body {
     position: relative;
     padding-bottom: 4px;
     text-decoration: none;
+    background: linear-gradient(90deg, $white, $white);
+    background-size: calc(100% - 12px) 2px;
+    background-position-x: 6px;
+    background-position-y: calc(100% - 2px);
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
 
-    &::after {
-        content: "";
-        transition: all 0.2s ease-in-out;
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translateX(-50%);
-        width: calc(100% - 12px);
-        height: 2px;
-        background-color: $white;
-    }
-
-    &:hover::after {
-        width: 100%;
+    &:hover {
+        background-position-x: 0;
+        background-size: 100% 2px;
     }
 }

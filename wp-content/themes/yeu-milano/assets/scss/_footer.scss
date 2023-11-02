@@ -5,10 +5,15 @@
         position: relative;
         width: 50%;
         margin-left: 10%;
+        margin-block: 2rem;
 
         img {
             position: relative;
             width: 100%;
+        }
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            width: 80%;
         }
     }
 
@@ -18,6 +23,7 @@
         display: flex;
         justify-content: space-between;
         padding-bottom: 4rem;
+        gap: 2rem;
 
         .contacts {
             position: relative;
@@ -45,6 +51,18 @@
                 span {
                     margin-left: 3rem;
                 }
+
+                @media screen and (max-width: map-get($breakpoints, md)) {
+                    span {
+                        margin-left: 2rem;
+                    }
+                }
+
+                @media screen and (max-width: map-get($breakpoints, sm)) {
+                    span {
+                        display: none;
+                    }
+                }
             }
         }
 
@@ -52,19 +70,24 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
+            width: calc(250px + 10vw);
+            margin-right: 15vw;
+
+            @media screen and (max-width: map-get($breakpoints, lg)) {
+                margin-right: 10vw;
+            }
+
+            @media screen and (max-width: map-get($breakpoints, md)) {
+                margin-right: 5vw;
+            }
 
             .citation {
                 position: relative;
-                width: 250px;
+                width: calc(100% - 10vw);
                 color: $white;
 
-                &:nth-child(1) {
-                    margin-right: 25vw;
-                }
-
                 &:nth-child(2) {
-                    margin-right: 15vw;
+                    margin-left: 10vw;
                     margin-top: 1rem;
                 }
 
@@ -86,13 +109,20 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 2rem;
         color: $white;
+        font-size: 14px;
         text-decoration: none;
         padding-left: 8%;
         padding-right: 5%;
         padding-top: 0.2rem;
         padding-bottom: 1rem;
         border-top: solid 1px $trasparent;
+
+        @media screen and (max-width: map-get($breakpoints, md)) {
+            font-size: 12px;
+            gap: 1rem;
+        }
 
         .underline {
             color: $white;
@@ -101,6 +131,18 @@
         .links {
             display: flex;
             gap: 3rem;
+            flex-shrink: 1;
+
+            @media screen and (max-width: map-get($breakpoints, lg)) {
+                gap: 2rem;
+            }
+
+            @media screen and (max-width: map-get($breakpoints, md)) {
+                gap: 1rem;
+            }
+
+            @media screen and (max-width: map-get($breakpoints, sm)) {
+            }
         }
 
         .arrowUp {
@@ -110,16 +152,33 @@
             color: $white;
             display: flex;
             align-items: center;
-            gap: 4rem;
+            gap: 2rem;
             cursor: pointer;
+
+            span {
+                transition: all 0.3s ease-in-out;
+                opacity: 0.8;
+            }
 
             svg {
                 transition: all 0.3s ease-in-out;
             }
 
             &:hover {
+                span {
+                    opacity: 1;
+                }
                 svg {
                     transform: translateY(-5px);
+                }
+            }
+
+            @media screen and (max-width: map-get($breakpoints, lg)) {
+                gap: 1rem;
+            }
+            @media screen and (max-width: map-get($breakpoints, md)) {
+                span {
+                    display: none;
                 }
             }
         }

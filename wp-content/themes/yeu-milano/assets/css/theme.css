@@ -9,20 +9,16 @@ body {
   position: relative;
   padding-bottom: 4px;
   text-decoration: none;
+  background: linear-gradient(90deg, #fff, #fff);
+  background-size: calc(100% - 12px) 2px;
+  background-position-x: 6px;
+  background-position-y: calc(100% - 2px);
+  background-repeat: no-repeat;
+  transition: all 0.3s ease-in-out;
 }
-.underline::after {
-  content: "";
-  transition: all 0.2s ease-in-out;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: calc(100% - 12px);
-  height: 2px;
-  background-color: #fff;
-}
-.underline:hover::after {
-  width: 100%;
+.underline:hover {
+  background-position-x: 0;
+  background-size: 100% 2px;
 }
 
 #header {
@@ -95,7 +91,7 @@ body {
 @media screen and (max-width: 576px) {
   #topSection .name {
     width: 90%;
-    top: 35%;
+    top: 40%;
   }
 }
 #topSection .logo {
@@ -403,7 +399,7 @@ body {
 #book .content .book {
   position: absolute;
   left: 50%;
-  bottom: 300px;
+  bottom: 250px;
   transform-style: preserve-3d;
   transform: translate(-65%, 50%) rotateX(45deg) rotateY(0deg) rotateZ(-45deg);
   width: 800px;
@@ -535,10 +531,16 @@ body {
   position: relative;
   width: 50%;
   margin-left: 10%;
+  margin-block: 2rem;
 }
 #footer .name img {
   position: relative;
   width: 100%;
+}
+@media screen and (max-width: 576px) {
+  #footer .name {
+    width: 80%;
+  }
 }
 #footer .content {
   position: relative;
@@ -546,6 +548,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding-bottom: 4rem;
+  gap: 2rem;
 }
 #footer .content .contacts {
   position: relative;
@@ -572,22 +575,40 @@ body {
 #footer .content .contacts .item span {
   margin-left: 3rem;
 }
+@media screen and (max-width: 768px) {
+  #footer .content .contacts .item span {
+    margin-left: 2rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  #footer .content .contacts .item span {
+    display: none;
+  }
+}
 #footer .content .citations {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  width: calc(250px + 10vw);
+  margin-right: 15vw;
+}
+@media screen and (max-width: 992px) {
+  #footer .content .citations {
+    margin-right: 10vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  #footer .content .citations {
+    margin-right: 5vw;
+  }
 }
 #footer .content .citations .citation {
   position: relative;
-  width: 250px;
+  width: calc(100% - 10vw);
   color: #fff;
 }
-#footer .content .citations .citation:nth-child(1) {
-  margin-right: 25vw;
-}
 #footer .content .citations .citation:nth-child(2) {
-  margin-right: 15vw;
+  margin-left: 10vw;
   margin-top: 1rem;
 }
 #footer .content .citations .citation .title {
@@ -603,7 +624,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
   color: #fff;
+  font-size: 14px;
   text-decoration: none;
   padding-left: 8%;
   padding-right: 5%;
@@ -611,12 +634,29 @@ body {
   padding-bottom: 1rem;
   border-top: solid 1px rgba(140, 140, 140, 0.2);
 }
+@media screen and (max-width: 768px) {
+  #footer .underFooter {
+    font-size: 12px;
+    gap: 1rem;
+  }
+}
 #footer .underFooter .underline {
   color: #fff;
 }
 #footer .underFooter .links {
   display: flex;
   gap: 3rem;
+  flex-shrink: 1;
+}
+@media screen and (max-width: 992px) {
+  #footer .underFooter .links {
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #footer .underFooter .links {
+    gap: 1rem;
+  }
 }
 #footer .underFooter .arrowUp {
   background: none;
@@ -625,14 +665,31 @@ body {
   color: #fff;
   display: flex;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
   cursor: pointer;
+}
+#footer .underFooter .arrowUp span {
+  transition: all 0.3s ease-in-out;
+  opacity: 0.8;
 }
 #footer .underFooter .arrowUp svg {
   transition: all 0.3s ease-in-out;
 }
+#footer .underFooter .arrowUp:hover span {
+  opacity: 1;
+}
 #footer .underFooter .arrowUp:hover svg {
   transform: translateY(-5px);
+}
+@media screen and (max-width: 992px) {
+  #footer .underFooter .arrowUp {
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #footer .underFooter .arrowUp span {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=theme.css.map */
