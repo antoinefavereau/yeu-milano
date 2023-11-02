@@ -4,7 +4,7 @@ get_header();
 
 <header id="header">
     <a href="" class="logo">
-        <img src="<?= get_template_directory_uri() ?>/assets\images\logo band 3.png" alt="logo">
+        <img src="<?= get_template_directory_uri() ?>/assets/images/logo band 3.png" alt="logo">
     </a>
     <button class="burger" title="menu">
         <div class="burgerLine"></div>
@@ -15,9 +15,9 @@ get_header();
 
 <section id="topSection">
     <video class="backgroundVideo" src="<?= get_template_directory_uri() ?>/assets/videos/hd0992.mov" autoplay loop muted></video>
-    <img class="name" src="<?= get_template_directory_uri() ?>/assets\images\name1.png" alt="name">
-    <img class="logo left" src="<?= get_template_directory_uri() ?>/assets\images\logo 2.png" alt="">
-    <img class="logo right" src="<?= get_template_directory_uri() ?>/assets\images\logo band 5.png" alt="">
+    <img class="name" src="<?= get_template_directory_uri() ?>/assets/images/name1.png" alt="name">
+    <img class="logo left" src="<?= get_template_directory_uri() ?>/assets/images/logo 2.png" alt="">
+    <img class="logo right" src="<?= get_template_directory_uri() ?>/assets/images/logo band 5.png" alt="">
     <p>
         Oluptatiur? Obistotatis aut lab illandu ntotatatem
         ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae
@@ -32,7 +32,7 @@ get_header();
 </section>
 
 <section id="afficheSection">
-    <img class="backgroundImage" src="<?= get_template_directory_uri() ?>/assets\images\background\name.png" alt="">
+    <img class="backgroundImage" src="<?= get_template_directory_uri() ?>/assets/images/background/name.png" alt="">
     <div class="imageDiv">
         <?php
         $affiches = new WP_Query(array(
@@ -123,14 +123,14 @@ get_header();
 </section>
 
 <section id="book">
-    <img class="backgroundImage" src="<?= get_template_directory_uri() ?>/assets\images\background\élément 1.png" alt="">
+    <img class="backgroundImage" src="<?= get_template_directory_uri() ?>/assets/images/background/élément 1.png" alt="">
     <svg class="arc" width="2000" height="1932" viewBox="0 0 2000 1932" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 1553.45C0 1353.51 42.3942 1155.83 124.386 973.465V973.465C288.133 609.263 551.34 298.668 883.744 77.3903L1000 0L1116.26 77.3902C1448.66 298.667 1711.87 609.263 1875.61 973.465V973.465C1957.61 1155.83 2000 1353.51 2000 1553.46V1931.47H0V1553.45Z" fill="white" />
     </svg>
 
     <div class="content">
-        <img class="logo" src="<?= get_template_directory_uri() ?>/assets\images\logo.png" alt="">
-        <img src="<?= get_template_directory_uri() ?>/assets\images\background\fenetre.png" alt="" class="window">
+        <img class="logo" src="<?= get_template_directory_uri() ?>/assets/images/logo.png" alt="">
+        <img src="<?= get_template_directory_uri() ?>/assets/images/background/fenetre.png" alt="" class="window">
         <div class="book">
             <div class="paper last">
                 <figure class="back"></figure>
@@ -159,14 +159,15 @@ get_header();
 </section>
 
 <section id="underText">
-    <img class="underText" src="<?= get_template_directory_uri() ?>/assets\images\sous texte.png" alt="">
-    <img class="backgroundImage1" src="<?= get_template_directory_uri() ?>/assets\images\background\étoile.png" alt="">
-    <img class="backgroundImage2" src="<?= get_template_directory_uri() ?>/assets\images\background\étoile droite.png" alt="">
+    <img class="underText" src="<?= get_template_directory_uri() ?>/assets/images/sous texte.png" alt="">
+    <img class="backgroundImage1" src="<?= get_template_directory_uri() ?>/assets/images/background/étoile.png" alt="">
+    <img class="backgroundImage2" src="<?= get_template_directory_uri() ?>/assets/images/background/étoile droite.png" alt="">
 </section>
 
 <footer id="footer">
+    <img class="backgroundImage" src="<?= get_template_directory_uri() ?>/assets/images/background/élément 3.png" alt="">
     <div class="name">
-        <img src="<?= get_template_directory_uri() ?>/assets\images\name2.png" alt="name">
+        <img src="<?= get_template_directory_uri() ?>/assets/images/name2.png" alt="name">
     </div>
     <div class="content">
         <div class="contacts">
