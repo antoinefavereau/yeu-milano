@@ -170,18 +170,17 @@ get_header();
     </div>
     <div class="content">
         <div class="contacts">
-            <a class="item" href="https://www.instagram.com/dyeuh_uuju/" target="_blank">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\contacts\contact 1.png" alt="">
-                <span class="underline">Intagram</span>
-            </a>
-            <a class="item" href="https://twitter.com/" target="_blank">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\contacts\contact 2.png" alt="">
-                <span class="underline">Twitter</span>
-            </a>
-            <a class="item" href="https://www.youtube.com/" target="_blank">
-                <img src="<?= get_template_directory_uri() ?>/assets\images\contacts\contact 3.png" alt="">
-                <span class="underline">Youtube</span>
-            </a>
+            <?php
+            $liens = new WP_Query(array(
+                'post_type' => "reseau-social"
+            ));
+            if ($liens->have_posts()) : while ($liens->have_posts()) : $liens->the_post(); ?>
+                    <a class="item" href="<?= esc_url(get_field('lien')) ?>" target="_blank">
+                        <img src="<?= esc_url(get_field('logo')['sizes']['thumbnail']) ?>" alt="<?= the_title() ?>">
+                        <span class="underline"><?= the_title() ?></span>
+                    </a>
+            <?php endwhile;
+            endif; ?>
         </div>
         <div class="citations">
             <div class="citation">
@@ -198,8 +197,11 @@ get_header();
     <div class="underFooter">
         <p>© 2023 DESIGN BY DYEUH-UUJU, CODED BY <a class="underline" href="https://antoinefavereau.fr" target="_blank">ANTOINE FAVEREAU</a></p>
         <div class="links">
-            <a class="underline" href="https://www.behance.net/" target="_blank">Behance</a>
-            <a class="underline" href="mailto:" target="_blank">Email</a>
+            <?php
+            $menu_items = wp_get_nav_menu_items('Footer');
+            foreach ($menu_items as $key => $menu_item) : ?>
+                <a class="underline" href="<?= $menu_item->url ?>" target="_blank"><?= $menu_item->title ?></a>
+            <?php endforeach; ?>
         </div>
         <button class="arrowUp">
             <span>Retour en haut</span>

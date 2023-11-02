@@ -31,7 +31,6 @@
             width: fit-content;
             display: flex;
             flex-direction: column;
-            gap: 2rem;
             padding-top: 2rem;
 
             .item {
@@ -39,22 +38,23 @@
                 align-items: center;
                 color: $white;
                 text-decoration: none;
+                height: 60px;
 
                 img {
                     transition: all 0.3s ease-in-out;
-                    width: 30px;
-                    height: 30px;
+                    width: 80px;
+                    height: 80px;
                     object-fit: contain;
                     object-position: center;
                 }
 
                 span {
-                    margin-left: 3rem;
+                    margin-left: 2rem;
                 }
 
                 @media screen and (max-width: map-get($breakpoints, md)) {
                     span {
-                        margin-left: 2rem;
+                        margin-left: 1rem;
                     }
                 }
 
