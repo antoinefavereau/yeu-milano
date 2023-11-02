@@ -132,7 +132,7 @@ get_header();
         <img class="logo" src="<?= get_template_directory_uri() ?>/assets\images\logo.png" alt="">
         <img src="<?= get_template_directory_uri() ?>/assets\images\background\fenetre.png" alt="" class="window">
         <div class="book">
-            <div class="paper">
+            <div class="paper last">
                 <figure class="back"></figure>
                 <figure class="front"></figure>
             </div>
@@ -148,7 +148,7 @@ get_header();
                 <figure class="back"><img src="<?= get_template_directory_uri() ?>/assets/images/book/page4.jpg" alt=""></figure>
                 <figure class="front"><img src="<?= get_template_directory_uri() ?>/assets/images/book/page3.jpg" alt=""></figure>
             </div>
-            <div class="paper">
+            <div class="paper first">
                 <figure class="back"><img src="<?= get_template_directory_uri() ?>/assets/images/book/page2.jpg" alt=""></figure>
                 <figure class="front"><img src="<?= get_template_directory_uri() ?>/assets/images/book/page1.jpg" alt=""></figure>
             </div>

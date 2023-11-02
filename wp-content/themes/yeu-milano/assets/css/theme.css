@@ -452,12 +452,15 @@ body {
   object-position: center;
   pointer-events: none;
 }
-#book .content .book .paper:first-child {
+#book .content .book .paper.last {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
   clip-path: inset(-30px -30px 0 0);
 }
 #book .content .book .paper.flip {
   transform: rotateY(-160deg);
+}
+#book .content .book .paper.flip.first {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
 }
 #book .content .book .side {
   position: absolute;
