@@ -4,6 +4,9 @@ body {
   background-color: #090a0a;
   font-family: system-ui;
 }
+body.modalOpen {
+  overflow: hidden;
+}
 
 .underline {
   position: relative;
@@ -19,6 +22,35 @@ body {
 .underline:hover {
   background-position-x: 0;
   background-size: 100% 2px;
+}
+
+.modalImage {
+  cursor: pointer;
+}
+
+#ImageModal {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+}
+#ImageModal:not(.active) {
+  display: none;
+}
+#ImageModal .background {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(9, 10, 10, 0.6);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  cursor: pointer;
+}
+#ImageModal img {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: calc(100% - 2rem);
+  max-height: calc(100% - 2rem);
 }
 
 #header {

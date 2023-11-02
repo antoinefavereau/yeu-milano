@@ -41,7 +41,7 @@ get_header();
         $count = 0;
         if ($affiches->have_posts()) : while ($affiches->have_posts()) : $affiches->the_post();
                 $count++; ?>
-                <img class="item" data-id="<?= $count ?>" src="<?= esc_url(get_field('image')['sizes']['large']) ?>" alt="<?= the_title() ?>">
+                <img class="item modalImage" data-id="<?= $count ?>" src="<?= esc_url(get_field('image')['sizes']['large']) ?>" alt="<?= the_title() ?>">
         <?php endwhile;
         endif;
         ?>
@@ -61,12 +61,12 @@ get_header();
                     <p><?= the_field("description") ?></p>
                     <?php if ($subImages['image_1']) : ?>
                         <div class="secondaryImages">
-                            <img src="<?= esc_url($subImages['image_1']['sizes']['thumbnail']) ?>" alt="<?= $subImages['image_1']['title'] ?>">
+                            <img class="modalImage" src="<?= esc_url($subImages['image_1']['sizes']['thumbnail']) ?>" data-image="<?= esc_url($subImages['image_1']['sizes']['large']) ?>" alt="<?= $subImages['image_1']['title'] ?>">
                             <?php if ($subImages['image_2']) : ?>
-                                <img src="<?= esc_url($subImages['image_2']['sizes']['thumbnail']) ?>" alt="<?= $subImages['image_2']['title'] ?>">
+                                <img class="modalImage" src="<?= esc_url($subImages['image_2']['sizes']['thumbnail']) ?>" data-image="<?= esc_url($subImages['image_2']['sizes']['large']) ?>" alt="<?= $subImages['image_2']['title'] ?>">
                             <?php endif; ?>
                             <?php if ($subImages['image_3']) : ?>
-                                <img src="<?= esc_url($subImages['image_3']['sizes']['thumbnail']) ?>" alt="<?= $subImages['image_3']['title'] ?>">
+                                <img class="modalImage" src="<?= esc_url($subImages['image_3']['sizes']['thumbnail']) ?>" data-image="<?= esc_url($subImages['image_3']['sizes']['large']) ?>" alt="<?= $subImages['image_3']['title'] ?>">
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>
@@ -115,7 +115,7 @@ get_header();
         ));
         if ($logos->have_posts()) : while ($logos->have_posts()) : $logos->the_post(); ?>
                 <li>
-                    <img src="<?= esc_url(get_field('image')['sizes']['thumbnail']) ?>" alt="<?= the_title() ?>">
+                    <img class="modalImage noLazyLoad" src="<?= esc_url(get_field('image')['sizes']['thumbnail']) ?>" data-image="<?= esc_url(get_field('image')['sizes']['large']) ?>" alt="<?= the_title() ?>">
                 </li>
         <?php endwhile;
         endif; ?>
@@ -212,6 +212,11 @@ get_header();
         </button>
     </div>
 </footer>
+
+<div id="ImageModal">
+    <div class="background"></div>
+    <img src="" alt="">
+</div>
 
 <?php
 get_footer();

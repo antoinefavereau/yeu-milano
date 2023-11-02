@@ -15,6 +15,10 @@ body {
     margin: 0;
     background-color: $black;
     font-family: system-ui;
+
+    &.modalOpen {
+        overflow: hidden;
+    }
 }
 
 .underline {
@@ -31,5 +35,37 @@ body {
     &:hover {
         background-position-x: 0;
         background-size: 100% 2px;
+    }
+}
+
+.modalImage {
+    cursor: pointer;
+}
+
+#ImageModal {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+
+    &:not(.active) {
+        display: none;
+    }
+
+    .background {
+        position: absolute;
+        inset: 0;
+        background-color: rgba($black, 0.6);
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+        cursor: pointer;
+    }
+
+    img {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        max-width: calc(100% - 2rem);
+        max-height: calc(100% - 2rem);
     }
 }

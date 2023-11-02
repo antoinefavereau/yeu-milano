@@ -78,6 +78,20 @@ for (let i = 0; i < 3; i++) {
     });
 }
 
+// modalImage
+
+document.querySelectorAll(".modalImage").forEach((image) => {
+    image.addEventListener("click", () => {
+        document.querySelector("#imageModal img").src = image.dataset.image || image.src;
+        document.querySelector("#imageModal").classList.add("active");
+        document.body.classList.add("modalOpen");
+    });
+});
+document.querySelector("#imageModal .background").addEventListener("click", () => {
+    document.querySelector("#imageModal").classList.remove("active");
+    document.body.classList.remove("modalOpen");
+});
+
 // book
 
 var book = document.querySelector(".book");
