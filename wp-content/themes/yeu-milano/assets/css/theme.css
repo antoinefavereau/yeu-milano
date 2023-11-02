@@ -518,8 +518,7 @@ body {
 #underText .backgroundImage2 {
   position: absolute;
   right: 0;
-  top: 100%;
-  transform: translateY(-50%);
+  bottom: -25vw;
   width: 50%;
   z-index: 10;
   pointer-events: none;
