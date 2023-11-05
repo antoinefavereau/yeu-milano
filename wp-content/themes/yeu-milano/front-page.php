@@ -6,11 +6,6 @@ get_header();
     <a href="" class="logo">
         <img src="<?= get_template_directory_uri() ?>/assets/images/logo band 3.png" alt="logo">
     </a>
-    <button class="burger" title="menu">
-        <div class="burgerLine"></div>
-        <div class="burgerLine"></div>
-        <div class="burgerLine"></div>
-    </button>
 </header>
 
 <section id="topSection">
