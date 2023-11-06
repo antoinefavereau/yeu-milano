@@ -105,6 +105,9 @@ function turnRight() {
     if (si > 1) {
         book.classList.add("open");
         si--;
+        document.querySelectorAll(".paper.flip").forEach((element) => {
+            element.style.pointerEvents = "none";
+        });
         paper[si].classList.add("flip");
         z++;
         paper[si].style.zIndex = z;
@@ -114,6 +117,8 @@ function turnRight() {
 function turnLeft() {
     if (si > paper.length - 2) {
         book.classList.remove("open");
+    } else {
+        paper[si+1].style.pointerEvents = "all";
     }
     if (si < paper.length) {
         si++;
