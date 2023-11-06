@@ -563,19 +563,6 @@ body.modalOpen {
     height: 2em;
   }
 }
-#book .content .pdfDownload {
-  position: absolute;
-  right: 6%;
-  bottom: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  color: #090a0a;
-}
-#book .content .pdfDownload:hover span {
-  text-decoration: underline;
-}
 
 #underText {
   position: relative;

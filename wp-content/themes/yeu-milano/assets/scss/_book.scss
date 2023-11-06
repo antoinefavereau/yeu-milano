@@ -219,22 +219,5 @@
                 }
             }
         }
-
-        .pdfDownload {
-            position: absolute;
-            right: 6%;
-            bottom: 2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-decoration: none;
-            color: $black;
-
-            &:hover {
-                span {
-                    text-decoration: underline;
-                }
-            }
-        }
     }
 }
