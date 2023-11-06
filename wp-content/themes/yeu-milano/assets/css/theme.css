@@ -28,15 +28,15 @@ body.modalOpen {
   cursor: pointer;
 }
 
-#ImageModal {
+#imageModal {
   position: fixed;
   inset: 0;
   z-index: 100000;
 }
-#ImageModal:not(.active) {
+#imageModal:not(.active) {
   display: none;
 }
-#ImageModal .background {
+#imageModal .background {
   position: absolute;
   inset: 0;
   background-color: rgba(9, 10, 10, 0.6);
@@ -44,7 +44,7 @@ body.modalOpen {
   backdrop-filter: blur(3px);
   cursor: pointer;
 }
-#ImageModal img {
+#imageModal img {
   position: relative;
   left: 50%;
   top: 50%;
@@ -556,7 +556,7 @@ body.modalOpen {
   max-width: 500px;
   margin-inline: auto;
 }
-#underText .backgroundImage1 {
+#underText #undertextBackgroundImage1 {
   position: relative;
   width: 35%;
   margin-block: 4rem;
@@ -564,7 +564,7 @@ body.modalOpen {
   -webkit-user-select: none;
   user-select: none;
 }
-#underText .backgroundImage2 {
+#underText #undertextBackgroundImage2 {
   position: absolute;
   right: 0;
   bottom: -25vw;
