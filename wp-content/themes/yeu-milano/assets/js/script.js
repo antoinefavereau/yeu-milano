@@ -102,13 +102,21 @@ var paper = document.querySelectorAll(".paper");
 var si = paper.length;
 var z = 1;
 
+function disablePapers(si) {
+    document.querySelectorAll(".paper").forEach((element) => {
+        element.style.pointerEvents = "none";
+    });
+    if (si < paper.length) {
+        paper[si].style.pointerEvents = "all";
+    }
+    paper[si - 1].style.pointerEvents = "all";
+}
+
 function turnRight() {
     if (si > 1) {
         book.classList.add("open");
         si--;
-        document.querySelectorAll(".paper.flip").forEach((element) => {
-            element.style.pointerEvents = "none";
-        });
+        disablePapers(si);
         paper[si].classList.add("flip");
         z++;
         paper[si].style.zIndex = z;
@@ -119,10 +127,11 @@ function turnLeft() {
     if (si > paper.length - 2) {
         book.classList.remove("open");
     } else {
-        paper[si+1].style.pointerEvents = "all";
+        paper[si + 1].style.pointerEvents = "all";
     }
     if (si < paper.length) {
         si++;
+        disablePapers(si);
         paper[si - 1].classList.remove("flip");
         setTimeout(function () {
             for (let i = 0; i <= si - 1; i++) {
