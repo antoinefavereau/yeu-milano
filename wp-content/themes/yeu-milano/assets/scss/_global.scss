@@ -68,4 +68,19 @@ body {
         max-width: calc(100% - 2rem);
         max-height: calc(100% - 2rem);
     }
+
+    .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: $white;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 }

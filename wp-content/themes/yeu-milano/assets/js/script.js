@@ -87,9 +87,11 @@ document.querySelectorAll(".modalImage").forEach((image) => {
         document.body.classList.add("modalOpen");
     });
 });
-document.querySelector("#imageModal .background").addEventListener("click", () => {
-    document.querySelector("#imageModal").classList.remove("active");
-    document.body.classList.remove("modalOpen");
+document.querySelectorAll("#imageModal .background, #imageModal .close").forEach((element) => {
+    element.addEventListener("click", () => {
+        document.querySelector("#imageModal").classList.remove("active");
+        document.body.classList.remove("modalOpen");
+    });
 });
 
 // book

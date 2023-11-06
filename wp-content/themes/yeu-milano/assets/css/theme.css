@@ -52,6 +52,19 @@ body.modalOpen {
   max-width: calc(100% - 2rem);
   max-height: calc(100% - 2rem);
 }
+#imageModal .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+#imageModal .close:hover {
+  opacity: 0.8;
+}
 
 #header {
   position: absolute;
