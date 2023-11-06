@@ -82,6 +82,7 @@ for (let i = 0; i < 3; i++) {
 
 document.querySelectorAll(".modalImage").forEach((image) => {
     image.addEventListener("click", () => {
+        document.querySelector("#imageModal img").src = "";
         document.querySelector("#imageModal img").src = image.dataset.image || image.src;
         document.querySelector("#imageModal").classList.add("active");
         document.body.classList.add("modalOpen");
