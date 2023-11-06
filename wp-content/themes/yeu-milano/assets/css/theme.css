@@ -178,7 +178,7 @@ body.modalOpen {
 #afficheSection {
   position: relative;
   min-height: 100vh;
-  margin-block: 4rem;
+  padding-block: 4rem;
   box-sizing: border-box;
   color: #fff;
   display: flex;
