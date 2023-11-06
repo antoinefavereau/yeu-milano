@@ -134,72 +134,88 @@ get_header();
             <div class="paper">
                 <figure class="back">
                     <img src="<?= get_template_directory_uri() ?>/assets/images/book/page8.jpg" alt="">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye see modalImage" title="voir" data-image="<?= get_template_directory_uri() ?>/assets/images/book/page8.jpg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in see modalImage" title="voir" data-image="<?= get_template_directory_uri() ?>/assets/images/book/page8.jpg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                        <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M7 10l6 0" />
+                        <path d="M10 7l0 6" />
+                        <path d="M21 21l-6 -6" />
                     </svg>
                 </figure>
                 <figure class="front">
                     <img src="<?= get_template_directory_uri() ?>/assets/images/book/page7.jpg" alt="">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye see modalImage" title="voir" data-image="<?= get_template_directory_uri() ?>/assets/images/book/page7.jpg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in see modalImage" title="voir" data-image="<?= get_template_directory_uri() ?>/assets/images/book/page7.jpg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                        <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M7 10l6 0" />
+                        <path d="M10 7l0 6" />
+                        <path d="M21 21l-6 -6" />
                     </svg>
                 </figure>
             </div>
             <div class="paper">
                 <figure class="back">
                     <img src="<?= get_template_directory_uri() ?>/assets/images/book/page6.jpg" alt="">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye see modalImage" title="voir" data-image="<?= get_template_directory_uri() ?>/assets/images/book/page6.jpg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in see modalImage" title="voir" data-image="<?= get_template_directory_uri() ?>/assets/images/book/page6.jpg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                        <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M7 10l6 0" />
+                        <path d="M10 7l0 6" />
+                        <path d="M21 21l-6 -6" />
                     </svg>
                 </figure>
                 <figure class="front">
                     <img src="<?= get_template_directory_uri() ?>/assets/images/book/page5.jpg" alt="">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye see modalImage" title="voir" data-image="<?= get_template_directory_uri() ?>/assets/images/book/page5.jpg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in see modalImage" title="voir" data-image="<?= get_template_directory_uri() ?>/assets/images/book/page5.jpg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                        <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M7 10l6 0" />
+                        <path d="M10 7l0 6" />
+                        <path d="M21 21l-6 -6" />
                     </svg>
                 </figure>
             </div>
             <div class="paper">
                 <figure class="back">
                     <img src="<?= get_template_directory_uri() ?>/assets/images/book/page4.jpg" alt="">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye see modalImage" title="voir" data-image="<?= get_template_directory_uri() ?>/assets/images/book/page4.jpg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in see modalImage" title="voir" data-image="<?= get_template_directory_uri() ?>/assets/images/book/page4.jpg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                        <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M7 10l6 0" />
+                        <path d="M10 7l0 6" />
+                        <path d="M21 21l-6 -6" />
                     </svg>
                 </figure>
                 <figure class="front">
                     <img src="<?= get_template_directory_uri() ?>/assets/images/book/page3.jpg" alt="">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye see modalImage" title="voir" data-image="<?= get_template_directory_uri() ?>/assets/images/book/page3.jpg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in see modalImage" title="voir" data-image="<?= get_template_directory_uri() ?>/assets/images/book/page3.jpg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                        <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M7 10l6 0" />
+                        <path d="M10 7l0 6" />
+                        <path d="M21 21l-6 -6" />
                     </svg>
                 </figure>
             </div>
             <div class="paper first">
                 <figure class="back">
                     <img src="<?= get_template_directory_uri() ?>/assets/images/book/page2.jpg" alt="">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye see modalImage" title="voir" data-image="<?= get_template_directory_uri() ?>/assets/images/book/page2.jpg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in see modalImage" title="voir" data-image="<?= get_template_directory_uri() ?>/assets/images/book/page2.jpg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                        <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M7 10l6 0" />
+                        <path d="M10 7l0 6" />
+                        <path d="M21 21l-6 -6" />
                     </svg>
                 </figure>
                 <figure class="front">
                     <img src="<?= get_template_directory_uri() ?>/assets/images/book/page1.jpg" alt="">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye see modalImage" title="voir" data-image="<?= get_template_directory_uri() ?>/assets/images/book/page1.jpg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-in see modalImage" title="voir" data-image="<?= get_template_directory_uri() ?>/assets/images/book/page1.jpg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                        <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M7 10l6 0" />
+                        <path d="M10 7l0 6" />
+                        <path d="M21 21l-6 -6" />
                     </svg>
                 </figure>
             </div>
