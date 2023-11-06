@@ -154,6 +154,12 @@
                             display: block;
                         }
                     }
+
+                    @media only screen and (hover: none) and (pointer: coarse) {
+                        .see {
+                            display: block;
+                        }
+                    }
                 }
 
                 &.last {
