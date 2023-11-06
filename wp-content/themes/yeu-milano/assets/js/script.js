@@ -125,12 +125,16 @@ function turnLeft() {
 }
 
 document.querySelectorAll(".book .paper .front").forEach((element) => {
-    element.addEventListener("click", () => {
-        turnRight();
+    element.addEventListener("click", (event) => {
+        if (!event.target.closest(".see")) {
+            turnRight();
+        }
     });
 });
 document.querySelectorAll(".book .paper .back").forEach((element) => {
-    element.addEventListener("click", () => {
-        turnLeft();
+    element.addEventListener("click", (event) => {
+        if (!event.target.closest(".see")) {
+            turnLeft();
+        }
     });
 });

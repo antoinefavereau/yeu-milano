@@ -112,7 +112,6 @@
                     margin: 0;
                     background-color: $white;
                     backface-visibility: hidden;
-                    overflow: hidden;
                     cursor: pointer;
                     -webkit-user-select: none;
                     user-select: none;
@@ -120,10 +119,6 @@
                     &.back {
                         transform: rotateY(180deg);
                         z-index: 1;
-                    }
-
-                    &:hover {
-                        filter: brightness(.95);
                     }
 
                     img {
@@ -135,6 +130,29 @@
                         object-fit: cover;
                         object-position: center;
                         pointer-events: none;
+                    }
+
+                    .see {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 15%;
+                        height: auto;
+                        padding-right: 5%;
+                        opacity: 0.6;
+                        display: none;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+
+                    &:hover {
+                        filter: brightness(0.95);
+
+                        .see {
+                            display: block;
+                        }
                     }
                 }
 

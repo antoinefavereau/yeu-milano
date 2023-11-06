@@ -461,7 +461,6 @@ body.modalOpen {
   margin: 0;
   background-color: #fff;
   backface-visibility: hidden;
-  overflow: hidden;
   cursor: pointer;
   -webkit-user-select: none;
   user-select: none;
@@ -469,9 +468,6 @@ body.modalOpen {
 #book .content .book .paper figure.back {
   transform: rotateY(180deg);
   z-index: 1;
-}
-#book .content .book .paper figure:hover {
-  filter: brightness(0.95);
 }
 #book .content .book .paper figure img {
   position: absolute;
@@ -482,6 +478,25 @@ body.modalOpen {
   object-fit: cover;
   object-position: center;
   pointer-events: none;
+}
+#book .content .book .paper figure .see {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 15%;
+  height: auto;
+  padding-right: 5%;
+  opacity: 0.6;
+  display: none;
+}
+#book .content .book .paper figure .see:hover {
+  opacity: 1;
+}
+#book .content .book .paper figure:hover {
+  filter: brightness(0.95);
+}
+#book .content .book .paper figure:hover .see {
+  display: block;
 }
 #book .content .book .paper.last {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
