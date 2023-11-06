@@ -459,21 +459,19 @@ body.modalOpen {
   height: 100%;
   width: 100%;
   margin: 0;
-  background-size: 200%;
-  background-repeat: no-repeat;
-  backface-visibility: hidden;
   background-color: #fff;
+  backface-visibility: hidden;
   overflow: hidden;
   cursor: pointer;
   -webkit-user-select: none;
   user-select: none;
 }
-#book .content .book .paper figure.front {
-  background-position: right;
-}
 #book .content .book .paper figure.back {
-  background-position: left;
   transform: rotateY(180deg);
+  z-index: 1;
+}
+#book .content .book .paper figure:hover {
+  filter: brightness(0.95);
 }
 #book .content .book .paper figure img {
   position: absolute;
@@ -488,6 +486,12 @@ body.modalOpen {
 #book .content .book .paper.last {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
   clip-path: inset(-30px -30px 0 0);
+}
+#book .content .book .paper.last figure {
+  cursor: unset;
+}
+#book .content .book .paper.last figure:hover {
+  filter: unset;
 }
 #book .content .book .paper.flip {
   transform: rotateY(-160deg);
