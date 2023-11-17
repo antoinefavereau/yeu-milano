@@ -1,6 +1,6 @@
 #footer {
     position: relative;
-    overflow: hidden;
+    box-shadow: 0px 0px 30px rgba($black, 0.3);
 
     .backgroundImage {
         position: absolute;
@@ -16,7 +16,7 @@
         position: relative;
         width: 50%;
         margin-left: 10%;
-        margin-block: 2rem;
+        padding-block: 2rem;
 
         img {
             position: relative;
