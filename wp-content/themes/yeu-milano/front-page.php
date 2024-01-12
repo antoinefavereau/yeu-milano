@@ -9,7 +9,9 @@ get_header();
 </header>
 
 <section id="topSection">
-    <video class="backgroundVideo" src="<?= get_template_directory_uri() ?>/assets/videos/hd0992.mov" autoplay loop muted></video>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.26/build/spline-viewer.js" async defer></script>
+    <spline-viewer class="backgroundVideo" url="https://prod.spline.design/23kp5Y5Qh9ganlo3/scene.splinecode"></spline-viewer>
+    <!-- <video class="backgroundVideo" src="<?= get_template_directory_uri() ?>/assets/videos/hd0992.mov" autoplay loop muted></video> -->
     <img class="name" src="<?= get_template_directory_uri() ?>/assets/images/name1.png" alt="name">
     <img class="logo left" src="<?= get_template_directory_uri() ?>/assets/images/logo 2.png" alt="">
     <img class="logo right" src="<?= get_template_directory_uri() ?>/assets/images/logo band 5.png" alt="">
