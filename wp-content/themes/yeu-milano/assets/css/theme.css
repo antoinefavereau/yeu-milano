@@ -124,6 +124,7 @@ body.modalOpen {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  filter: brightness(0.5);
 }
 #topSection .name {
   position: absolute;
