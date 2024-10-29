@@ -45,7 +45,7 @@ const BookSection = () => {
     );
 
     return (
-        <section className="relative pb-vh">
+        <section className="relative">
             <Image
                 className="absolute w-8/12 h-auto start-1/2 -translate-x-1/2 pt-16 select-none"
                 src="/background/élément 1.png"
@@ -76,7 +76,6 @@ const BookSection = () => {
                     alt="fenêtre"
                 />
                 <Book images={images} />
-                <div className="h-screen w-full bg-white"></div>
             </div>
         </section>
     );
