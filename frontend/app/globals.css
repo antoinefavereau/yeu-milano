@@ -129,7 +129,7 @@
 
   &.open {
     width: min(90%, 1000px);
-    transform: translate(-2%, 45%) rotateX(25deg) rotateY(0deg) rotateZ(-20deg);
+    transform: translate(-2%, 25%) rotateX(25deg) rotateY(0deg) rotateZ(-20deg);
   }
 
   .paper {
