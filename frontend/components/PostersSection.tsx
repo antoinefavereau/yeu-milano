@@ -73,19 +73,21 @@ const PostersSection: React.FC<PostersSectionProps> = ({ scrollRef }) => {
 
   const [activePoster, setActivePoster] = useState<Poster>(posters[0]);
 
-  const [isMd, setIsMd] = useState(
-    window.matchMedia("(min-width: 768px)").matches
-  );
+  const [isMd, setIsMd] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
+    if (typeof window !== "undefined") {
       setIsMd(window.matchMedia("(min-width: 768px)").matches);
-    };
 
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+      const handleResize = () => {
+        setIsMd(window.matchMedia("(min-width: 768px)").matches);
+      };
+
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, []);
 
   return (
