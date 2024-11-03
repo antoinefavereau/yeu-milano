@@ -69,7 +69,7 @@ const BookSection = () => {
         />
       </svg>
       <div className="relative flex flex-col items-center mt-[calc(10rem+16vw)]">
-        <div className="absolute w-full bottom-0 h-[calc(100%-96vw+7rem)] bg-white"></div>
+        <div className="absolute w-full -bottom-[1rem] h-[calc(100%-96vw+8rem)] bg-white"></div>
         <Image
           className="relative max-w-[50%] h-auto"
           src="/logo.png"
