@@ -5,7 +5,6 @@ import BookSection from "@/components/BookSection";
 import LogosSection from "@/components/LogosSection";
 import PostersSection from "@/components/PostersSection";
 import TopSection from "@/components/TopSection";
-import UnderTextSection from "@/components/UnderTextSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -17,7 +16,6 @@ export default function Home() {
       <PostersSection scrollRef={scrollRef} />
       <LogosSection />
       <BookSection />
-      <UnderTextSection />
       <Footer />
     </main>
   );
