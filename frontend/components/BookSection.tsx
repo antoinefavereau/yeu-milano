@@ -29,19 +29,16 @@ const BookSection = () => {
 
   useGSAP(
     () => {
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: container.current,
-            start: "top 40%",
-            end: "top 0%",
-            scrub: true,
-          },
-        })
-        .to(arch.current, {
-          ease: "none",
-          attr: { d: archPathTo },
-        });
+      gsap.to(arch.current, {
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top 40%",
+          end: "top 0%",
+          scrub: true,
+        },
+        ease: "none",
+        attr: { d: archPathTo },
+      });
     },
     { scope: arch }
   );
