@@ -70,6 +70,23 @@
   }
 }
 
+.underlinedLink {
+  position: relative;
+  padding-bottom: 6px;
+  text-decoration: none;
+  background: linear-gradient(90deg, white, white);
+  background-size: calc(100% - 12px) 2px;
+  background-position-x: 6px;
+  background-position-y: calc(100% - 2px);
+  background-repeat: no-repeat;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-position-x: 0;
+    background-size: 100% 2px;
+  }
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   left: unset !important;
@@ -110,11 +127,11 @@
     }
 
     &.swiper-button-next {
-        bottom: 0 !important;
-        right: 0 !important;
-        height: 100% !important;
-        width: 44px !important;
-        background: linear-gradient(90deg, #0000, #000d);
+      bottom: 0 !important;
+      right: 0 !important;
+      height: 100% !important;
+      width: 44px !important;
+      background: linear-gradient(90deg, #0000, #000d);
     }
   }
 }
