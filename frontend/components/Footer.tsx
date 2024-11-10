@@ -2,6 +2,27 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
+  const socials = [
+    {
+      id: 1,
+      src: "/socials/contact-1.png",
+      alt: "Instagram",
+      href: "https://www.instagram.com/yeu_milano/",
+    },
+    {
+      id: 2,
+      src: "/socials/contact-2.png",
+      alt: "X",
+      href: "https://x.com/DyeuhUuju",
+    },
+    {
+      id: 3,
+      src: "/socials/contact-3.png",
+      alt: "Youtube",
+      href: "https://www.youtube.com/@dyeuh-uuju4515",
+    },
+  ];
+
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -24,48 +45,25 @@ const Footer = () => {
       />
       <div className="relative flex justify-between ps-[12%] pb-16 gap-8">
         <div className="w-fit flex flex-col pt-8">
-          <Link
-            className="flex items-center h-[60px]"
-            href="https://www.instagram.com/dyeuh_uuju"
-            target="_blank"
-          >
-            <Image
-              className="object-contain object-center"
-              src="/socials/contact-1.png"
-              width={80}
-              height={80}
-              alt="Instagram"
-            />
-            <span className="underlinedLink hidden sm:inline md:4 sm:ms-8">Instagram</span>
-          </Link>
-          <Link
-            className="flex items-center h-[60px]"
-            href="https://www.instagram.com/dyeuh_uuju"
-            target="_blank"
-          >
-            <Image
-              className="object-contain object-center"
-              src="/socials/contact-2.png"
-              width={80}
-              height={80}
-              alt="Twitter"
-            />
-            <span className="underlinedLink hidden sm:inline md:4 sm:ms-8">Twitter</span>
-          </Link>
-          <Link
-            className="flex items-center h-[60px]"
-            href="https://www.instagram.com/dyeuh_uuju"
-            target="_blank"
-          >
-            <Image
-              className="object-contain object-center"
-              src="/socials/contact-3.png"
-              width={80}
-              height={80}
-              alt="Youtube"
-            />
-            <span className="underlinedLink hidden sm:inline md:4 sm:ms-8">Youtube</span>
-          </Link>
+          {socials.map((social) => (
+            <Link
+              key={social.id}
+              className="flex items-center h-[60px]"
+              href={social.href}
+              target="_blank"
+            >
+              <Image
+                className="object-contain object-center"
+                src={social.src}
+                width={80}
+                height={80}
+                alt={social.alt}
+              />
+              <span className="underlinedLink hidden sm:inline md:4 sm:ms-8">
+                {social.alt}
+              </span>
+            </Link>
+          ))}
         </div>
         <div className="relative flex flex-col me-[5vw] md:me-[10vw] lg:me-[15vw] w-[calc(250px+10vw)]">
           <div className="relative w-[calc(100%-10vw]">

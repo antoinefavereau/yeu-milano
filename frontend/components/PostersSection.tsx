@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 interface Poster {
+  id: number;
   title: string;
   description: string;
   images: string[];
@@ -20,53 +21,124 @@ interface PostersSectionProps {
 const PostersSection: React.FC<PostersSectionProps> = ({ scrollRef }) => {
   const posters: Poster[] = [
     {
-      title: "Poster 1",
+      id: 1,
+      title: "Me On Drugs",
       description:
         "Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int. Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int.",
       images: [
-        "/tmp images/N°11.jpg",
-        "/tmp images/N°11 1.jpg",
-        "/tmp images/N°11 2.jpg",
+        "/affiches/Me On Drugs.jpg",
+        "/affiches/Me On Drugs1.jpg",
+        "/affiches/Me On Drugs2.jpg",
       ],
     },
     {
-      title: "Poster 2",
+      id: 2,
+      title: "N°10",
       description:
         "Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int. Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int.",
       images: [
-        "/tmp images/N°11.jpg",
-        "/tmp images/N°11 1.jpg",
-        "/tmp images/N°11 2.jpg",
+        "/affiches/N°10.jpg",
+        "/affiches/N°10 1.jpg",
+        "/affiches/N°10 2.jpg",
       ],
     },
     {
-      title: "Poster 3",
+      id: 3,
+      title: "N°11",
       description:
         "Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int. Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int.",
       images: [
-        "/tmp images/N°11.jpg",
-        "/tmp images/N°11 1.jpg",
-        "/tmp images/N°11 2.jpg",
+        "/affiches/N°11.jpg",
+        "/affiches/N°11 1.jpg",
+        "/affiches/N°11 2.jpg",
       ],
     },
     {
-      title: "Poster 4",
+      id: 4,
+      title: "N°12",
       description:
         "Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int. Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int.",
       images: [
-        "/tmp images/N°11.jpg",
-        "/tmp images/N°11 1.jpg",
-        "/tmp images/N°11 2.jpg",
+        "/affiches/N°12.jpg",
+        "/affiches/N°12 1.jpg",
+        "/affiches/N°12 2.jpg",
       ],
     },
     {
-      title: "Poster 5",
+      id: 5,
+      title: "N°13",
       description:
         "Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int. Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int.",
       images: [
-        "/tmp images/N°11.jpg",
-        "/tmp images/N°11 1.jpg",
-        "/tmp images/N°11 2.jpg",
+        "/affiches/N°13.jpg",
+        "/affiches/N°13 1.jpg",
+        "/affiches/N°13 2.jpg",
+      ],
+    },
+    {
+      id: 6,
+      title: "N°14",
+      description:
+        "Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int. Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int.",
+      images: [
+        "/affiches/N°14.jpg",
+        "/affiches/N°14 1.jpg",
+        "/affiches/N°14 2.jpg",
+      ],
+    },
+    {
+      id: 7,
+      title: "N°15",
+      description:
+        "Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int. Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int.",
+      images: [
+        "/affiches/N°15.jpg",
+        "/affiches/N°15 1.jpg",
+        "/affiches/N°15 2.jpg",
+      ],
+    },
+    {
+      id: 8,
+      title: "N°16",
+      description:
+        "Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int. Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int.",
+      images: [
+        "/affiches/N°16.jpg",
+        "/affiches/N°16 1.jpg",
+        "/affiches/N°16 2.jpg",
+      ],
+    },
+    {
+      id: 9,
+      title: "N°17",
+      description:
+        "Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int. Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int.",
+      images: [
+        "/affiches/N°17.jpg",
+        "/affiches/N°17 1.jpg",
+        "/affiches/N°17 2.jpg",
+      ],
+    },
+    {
+      id: 10,
+      title: "N°18",
+      description:
+        "Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int. Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int.",
+      images: [
+        "/affiches/N°18.jpg",
+        "/affiches/N°18 1.jpg",
+        "/affiches/N°18 2.jpg",
+      ],
+    },
+    {
+      id: 11,
+      title: "N°19",
+      description:
+        "Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int. Oluptatiur? Obistotatis aut lab illandu ntotatatem ressunt iuntia voluptam fugitinusae. Nam eumquamust ma dolorrovid et quam unt, tem. Rae pratet quid quiam aut hilitatem conet explictam endenis volentur? Qui int.",
+      images: [
+        "/affiches/N°19.jpg",
+        "/affiches/N°19 1.jpg",
+        "/affiches/N°19 2.jpg",
       ],
     },
   ];
@@ -109,16 +181,14 @@ const PostersSection: React.FC<PostersSectionProps> = ({ scrollRef }) => {
           />
         </div>
         <div className="flex flex-col gap-8 shrink">
-          <h2 className="text-4xl font-bold uppercase mt-8">
-            {activePoster.title}
-          </h2>
+          <h2 className="text-4xl font-bold mt-8">{activePoster.title}</h2>
           <p className="grow overflow-auto font-light">
             {activePoster.description}
           </p>
           <div className="flex gap-4 max-w-full overflow-auto">
-            {activePoster.images.map((image, index) => (
+            {activePoster.images.map((image) => (
               <Image
-                key={index}
+                key={image}
                 className="lg:first:hidden"
                 src={image}
                 width={100}
@@ -138,9 +208,9 @@ const PostersSection: React.FC<PostersSectionProps> = ({ scrollRef }) => {
           navigation
           modules={[Mousewheel, Navigation]}
         >
-          {posters.map((poster, index) => (
+          {posters.map((poster) => (
             <SwiperSlide
-              key={index}
+              key={poster.id}
               className="cursor-pointer"
               onClick={() => setActivePoster(poster)}
             >
