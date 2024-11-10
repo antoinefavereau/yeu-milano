@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="relative">
       <Image
-        className="absolute top-0 left-0 w-full h-full object-contain object-center select-none"
+        className="absolute top-0 left-0 w-full h-full object-contain object-center select-none pointer-events-none"
         src="/background/élément 3.png"
         width={1920}
         height={1080}

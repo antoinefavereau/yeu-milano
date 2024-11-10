@@ -93,7 +93,7 @@ const PostersSection: React.FC<PostersSectionProps> = ({ scrollRef }) => {
   return (
     <section className="relative" ref={scrollRef}>
       <Image
-        className="absolute w-full h-full object-contain object-center select-none"
+        className="absolute w-full h-full object-contain object-center select-none pointer-events-none"
         src="/background/name.png"
         width={1920}
         height={1080}

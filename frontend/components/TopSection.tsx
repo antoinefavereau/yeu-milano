@@ -13,7 +13,7 @@ const TopSection: React.FC<TopSectionProps> = ({ scrollRef }) => {
 
     return (
         <section className="relative h-screen flex flex-col justify-around items-center px-[10%]">
-            <Image className="absolute w-full h-full object-cover object-center select-none" src="/background image.png" width={1920} height={1080} alt="image de fond" />
+            <Image className="absolute w-full h-full object-cover object-center select-none pointer-events-none" src="/background image.png" width={1920} height={1080} alt="image de fond" />
             <div className="relative w-full flex justify-between items-center">
                 <Link href="/">
                     <Image src="/logo band 3.png" width={80} height={80} alt="logo" />

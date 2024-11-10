@@ -50,7 +50,7 @@ const UnderTextSection = () => {
       />
       <Image
         ref={star1}
-        className="absolute w-[40%] top-[60%] left-0 -translate-y-1/2"
+        className="absolute w-[40%] top-[60%] left-0 -translate-y-1/2 select-none pointer-events-none"
         src="/background/étoile.png"
         width="800"
         height="800"
@@ -58,7 +58,7 @@ const UnderTextSection = () => {
       />
       <Image
         ref={star2}
-        className="absolute w-[60%] bottom-0 right-0 translate-y-1/2"
+        className="absolute w-[60%] bottom-0 right-0 translate-y-1/2 select-none pointer-events-none"
         src="/background/étoile droite.png"
         width="800"
         height="800"

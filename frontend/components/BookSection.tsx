@@ -46,7 +46,7 @@ const BookSection = () => {
   return (
     <section className="relative">
       <Image
-        className="absolute w-8/12 h-auto start-1/2 -translate-x-1/2 pt-16 select-none"
+        className="absolute w-8/12 h-auto start-1/2 -translate-x-1/2 pt-16 select-none pointer-events-none"
         src="/background/élément 1.png"
         width="1000"
         height="1000"
