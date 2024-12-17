@@ -6,19 +6,19 @@ const Footer = () => {
     {
       id: 1,
       src: "/socials/contact-1.png",
-      alt: "Instagram",
+      alt: "instagram_logo",
       href: "https://www.instagram.com/yeu_milano/",
     },
     {
       id: 2,
       src: "/socials/contact-2.png",
-      alt: "X",
+      alt: "x_logo",
       href: "https://x.com/DyeuhUuju",
     },
     {
       id: 3,
       src: "/socials/contact-3.png",
-      alt: "Youtube",
+      alt: "youtube_logo",
       href: "https://www.youtube.com/@dyeuh-uuju4515",
     },
   ];
