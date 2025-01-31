@@ -5,18 +5,21 @@ const Footer = () => {
   const socials = [
     {
       id: 1,
+      title: "Instagram",
       src: "/socials/contact-1.png",
       alt: "instagram_logo",
       href: "https://www.instagram.com/yeu_milano/",
     },
     {
       id: 2,
+      title: "X",
       src: "/socials/contact-2.png",
       alt: "x_logo",
       href: "https://x.com/DyeuhUuju",
     },
     {
       id: 3,
+      title: "YouTube",
       src: "/socials/contact-3.png",
       alt: "youtube_logo",
       href: "https://www.youtube.com/@dyeuh-uuju4515",
@@ -60,7 +63,7 @@ const Footer = () => {
                 alt={social.alt}
               />
               <span className="underlinedLink hidden sm:inline md:4 sm:ms-8">
-                {social.alt}
+                {social.title}
               </span>
             </Link>
           ))}
