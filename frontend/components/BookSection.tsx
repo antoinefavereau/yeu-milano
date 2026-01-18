@@ -20,31 +20,27 @@ const BookSection = () => {
     "/book/page8.jpg",
   ];
 
-  const container = useRef<SVGSVGElement | null>(null);
-  const arch = useRef<SVGPathElement | null>(null);
-  const archPathTo =
-    "M0 1553.45C0 1353.51 0 730.5 0 500C0 0 0 0 500 0L1000 0L1500 0C2000 0 2000 0 2000 500C2000 830.5 2000 1353.51 2000 1553.46V1931.47H0V1553.45Z";
-  // M0 1553.45C0 1353.51 42.3942 1155.83 124.386 973.465C288.133 609.263 551.34 298.668 883.744 77.3903L1000 0L1116.26 77.3902C1448.66 298.667 1711.87 609.263 1875.61 973.465C1957.61 1155.83 2000 1353.51 2000 1553.46V1931.47H0V1553.45Z
-  // M0 1553.45C0 1353.51 5.57327e-06 730.5 3.8147e-06 500C0 0 0 0 500 1.92826e-10H1000H1500C2000 -1.66982e-09 2000 0 2000 500C2000 830.5 2000 1353.51 2000 1553.46V1931.47H0V1553.45Z
+  const container = useRef<HTMLDivElement | null>(null);
+  const arch = useRef<SVGSVGElement | null>(null);
 
   useGSAP(
     () => {
       gsap.to(arch.current, {
         scrollTrigger: {
           trigger: container.current,
-          start: "top 40%",
-          end: "top 0%",
+          start: "top 20%",
+          end: "top -20%",
           scrub: true,
         },
-        ease: "none",
-        attr: { d: archPathTo },
+        scale: 2.5,
+        ease: "power4.in",
       });
     },
-    { scope: arch }
+    { scope: container },
   );
 
   return (
-    <section className="relative">
+    <section className="relative overflow-hidden" ref={container}>
       <Image
         className="absolute w-8/12 h-auto start-1/2 -translate-x-1/2 pt-16 select-none pointer-events-none"
         src="/background/élément 1.png"
@@ -57,12 +53,11 @@ const BookSection = () => {
         width="2000"
         height="1932"
         viewBox="0 0 2000 1932"
-        ref={container}
+        ref={arch}
       >
         <path
           d="M0 1553.45C0 1353.51 42.3942 1155.83 124.386 973.465C288.133 609.263 551.34 298.668 883.744 77.3903L1000 0L1116.26 77.3902C1448.66 298.667 1711.87 609.263 1875.61 973.465C1957.61 1155.83 2000 1353.51 2000 1553.46V1931.47H0V1553.45Z"
           fill="white"
-          ref={arch}
         />
       </svg>
       <div className="relative flex flex-col items-center mt-[calc(10rem+16vw)]">
