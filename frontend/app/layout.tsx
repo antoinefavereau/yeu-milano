@@ -1,22 +1,25 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import LenisProvider from "@/components/LenisProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Yeu Milano",
-    description: "Portfolio de Yeu Milano",
+  title: "Yeu Milano",
+  description: "Portfolio de Yeu Milano",
 };
 
 export default function RootLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-    return (
-        <html lang="fr" className="dark">
-            <body className={inter.className}>{children}</body>
-        </html>
-    );
+  return (
+    <html lang="fr" className="dark">
+      <body className={inter.className}>
+        <LenisProvider>{children}</LenisProvider>
+      </body>
+    </html>
+  );
 }
